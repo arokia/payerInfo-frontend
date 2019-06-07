@@ -75,8 +75,10 @@ export default class Payer extends Component {
       city: this.state.city,
       state: this.state.state,
       zip: this.state.zip,
-      contactName: this.state.contactName,
-      contactInfo: this.state.contactInfo,
+      contact: {
+        contactName: this.state.contactName,
+        contactInfo: this.state.contactInfo
+      },
       type: this.state.type
     };
     if (this.state.type === "HOSTED") {

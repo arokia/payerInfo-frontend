@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
-
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Payer from "./components/Payer";
 import PayerList from "./components/PayerDetails";
+import TransactionPage from "./components/TransactionPage";
 
 class App extends Component {
   render() {
@@ -27,6 +27,11 @@ class App extends Component {
                     Payer List
                   </Link>
                 </li>
+                <li className="nav-item">
+                  <Link to={"/transaction"} className="nav-link">
+                    Transaction
+                  </Link>
+                </li>
               </ul>
             </div>
           </nav>
@@ -35,6 +40,7 @@ class App extends Component {
             <Route exact path="/" component={Payer} />
             <Route path="/create" component={Payer} />
             <Route path="/list" component={PayerList} />
+            <Route path="/transaction" component={TransactionPage} />
           </Switch>
         </div>
       </Router>

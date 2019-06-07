@@ -76,11 +76,7 @@ export default class PayerDetails extends Component {
     } else if (!isLoaded) {
       return <Alert color="primary">Loading...</Alert>;
     } else {
-      let optionItems = payers.map(payer => (
-        <option value={payer.id} key={payer.id}>
-          {payer.name}
-        </option>
-      ));
+     
       return (
         <Container>
           <Row>
@@ -91,7 +87,16 @@ export default class PayerDetails extends Component {
                 onChange={this.handleChange}
               >
                 <option key="0">Choose One</option>
-                {optionItems}
+              
+                {payers.map(payer => {
+                  return (
+                    <option value={payer.id} key={payer.id}>
+                      {payer.name}
+                    </option>
+                  );
+                })
+
+                }
               </select>
             </Col>
           </Row>
@@ -121,11 +126,11 @@ export default class PayerDetails extends Component {
                 <div className="row">
                   <div className="col-3 col-head">Contact Name:</div>
                   <div className="col-2">
-                    {this.state.payer.contactName}
+                    {this.state.payer.contact.contactName}
                   </div>
                   <div className="col-3 col-head">Contact Info:</div>
                   <div className="col-2">
-                    {this.state.payer.contactInfo}
+                    {this.state.payer.contact.contactInfo}
                   </div>
                 </div>
                 <div className="row">

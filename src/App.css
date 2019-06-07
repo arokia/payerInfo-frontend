@@ -1,13 +1,38 @@
-.App {
-  text-align: center;
+body {
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 0.05em;
 }
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+* {
+    box-sizing: border-box;
+    font-family: 'Core Sans C', sans-serif;
 }
-
+.textbox {
+    display: block;
+    width: 100%;
+    height: 32px;
+    box-shadow: rgba(155, 161, 169, 0.25) 0px 2px 2px 0px inset;
+    font-size: 13px;
+    color: rgb(51, 51, 51);
+    background-color: rgb(255, 255, 255);
+    padding: 0px 8px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(155, 161, 169);
+    border-image: initial;
+    border-radius: 3px;
+    outline: none;
+}
+label {
+    display: block;
+    margin-bottom: 0.3rem;
+    color: rgb(55, 71, 79);
+    font-size: 11px;
+    line-height: 1.4em;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -23,12 +48,73 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.col-head {
+  font-weight: bold;
 }
-.col-head { font-weight: bold; }
+
+.wrapper {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: 1fr;
+}
+.form-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+   grid-gap: 10px;
+  
+}
+.split-two {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+   grid-gap: 10px;
+}
+.expand {
+  text-align: right;
+  padding-right: 20px;
+}
+.datetime-wrapper {
+  display: grid;
+  grid-template-columns: 1fr; 
+ 
+}
+.small-box{
+  width:40px;
+}
+.ampm{
+ width:60px;
+}
+.time-separator{
+  line-height: 2.4em;
+}
+.datetime {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+   grid-gap: 10px;
+}
+.time-wrapper{
+  display: grid;
+   grid-template-columns: 2fr .5fr 2fr 2fr;
+   
+}
+/* div{
+  border: 1px dotted cornflowerblue ;
+  line-height: 25px;
+  padding: 10px;
+} */
+
+.small {
+  width: 50px;
+}
+label {
+  display: block;
+  margin-bottom: 0.3rem;
+  color: rgb(55, 71, 79);
+  font-size: 11px;
+  line-height: 2.0em;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  -webkit-box-flex: 1;
+  flex-grow: 1;
+  top:10px;
+}
